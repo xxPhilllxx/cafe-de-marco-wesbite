@@ -93,8 +93,8 @@ export default function About() {
                   <p style={{ fontSize: '1.1rem', lineHeight: '1.7', color: 'var(--text-primary)' }}>{about.mission}</p>
                   <div style={{ display: 'flex', gap: '2rem', marginTop: '2rem' }}>
                     <div>
-                      <h4 style={{ color: 'var(--color-gold)', fontSize: '1.5rem', marginBottom: '0.2rem' }}>100%</h4>
-                      <p style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Fresh Seafood</p>
+                      <h4 style={{ color: 'var(--color-gold)', fontSize: '1.5rem', marginBottom: '0.2rem' }}>Fresh</h4>
+                      <p style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Seafood</p>
                     </div>
                     <div>
                       <h4 style={{ color: 'var(--color-gold)', fontSize: '1.5rem', marginBottom: '0.2rem' }}>Prime</h4>

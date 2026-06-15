@@ -29,8 +29,6 @@ export default function Hero() {
         height: '100vh',
         width: '100%',
         overflow: 'hidden',
-        display: 'flex',
-        alignItems: 'center',
         backgroundColor: '#000',
       }}
     >
@@ -46,7 +44,11 @@ export default function Hero() {
             bottom: 0,
             opacity: idx === currentSlide ? 1 : 0,
             transition: 'opacity 1.5s ease-in-out',
-            zIndex: 1,
+            zIndex: idx === currentSlide ? 5 : 1,
+            pointerEvents: idx === currentSlide ? 'auto' : 'none',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
           }}
         >
           {/* Cover image overlay */}
@@ -66,92 +68,95 @@ export default function Hero() {
             src={slide.url}
             alt={slide.title}
             style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
               width: '100%',
               height: '100%',
               objectFit: 'cover',
               transform: idx === currentSlide ? 'scale(1.05)' : 'scale(1.0)',
-              transition: 'transform 6.5s ease-out-in',
+              transition: 'transform 6.5s ease-in-out',
+              zIndex: 1,
             }}
           />
+
+          {/* Hero Content Container */}
+          <div 
+            className="container" 
+            style={{
+              position: 'relative',
+              zIndex: 10,
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              textAlign: 'center',
+              paddingBottom: '2rem',
+              transform: idx === currentSlide ? 'translateY(0)' : 'translateY(20px)',
+              transition: 'transform 1.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 1.5s ease-in-out',
+            }}
+          >
+            <span 
+              style={{ 
+                color: 'var(--color-gold)', 
+                fontSize: '0.85rem', 
+                textTransform: 'uppercase', 
+                letterSpacing: '0.3em',
+                marginBottom: '1rem',
+                fontWeight: '600'
+              }}
+            >
+              Welcome to {restaurantConfig.name}
+            </span>
+            
+            {/* Title */}
+            <h1 
+              className="serif-font"
+              style={{
+                fontSize: 'clamp(2.5rem, 5.5vw, 5rem)',
+                color: 'var(--text-primary)',
+                lineHeight: 1.1,
+                marginBottom: '1.5rem',
+                textShadow: '0 4px 20px rgba(0,0,0,0.6)',
+                maxWidth: '900px'
+              }}
+            >
+              {slide.title}
+            </h1>
+
+            {/* Description */}
+            <p
+              style={{
+                fontSize: 'clamp(1rem, 1.8vw, 1.25rem)',
+                color: 'var(--text-secondary)',
+                maxWidth: '650px',
+                margin: '0 auto 2.5rem',
+                lineHeight: 1.6,
+                textShadow: '0 2px 10px rgba(0,0,0,0.5)',
+              }}
+            >
+              {slide.description}
+            </p>
+
+            {/* CTA Buttons */}
+            <div 
+              style={{ 
+                display: 'flex', 
+                flexWrap: 'wrap', 
+                justifyContent: 'center', 
+                gap: '1.25rem',
+              }}
+            >
+              <a href="#menu" className="btn-primary" style={{ animation: 'glowPulse 3s infinite' }}>
+                <span>Explore Menu</span>
+              </a>
+              <a href="#contact" className="btn-secondary">
+                <span>Contact Us</span>
+              </a>
+            </div>
+          </div>
         </div>
       ))}
-
-      {/* Hero Content Container */}
-      <div 
-        className="container" 
-        style={{
-          position: 'relative',
-          zIndex: 10,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          textAlign: 'center',
-          paddingBottom: '2rem',
-        }}
-      >
-        <span 
-          style={{ 
-            color: 'var(--color-gold)', 
-            fontSize: '0.85rem', 
-            textTransform: 'uppercase', 
-            letterSpacing: '0.3em',
-            marginBottom: '1rem',
-            animation: 'slideUp 0.8s ease forwards',
-            fontWeight: '600'
-          }}
-        >
-          Welcome to {restaurantConfig.name}
-        </span>
-        
-        {/* Dynamic Titles */}
-        <h1 
-          className="serif-font"
-          style={{
-            fontSize: 'clamp(2.5rem, 5.5vw, 5rem)',
-            color: 'var(--text-primary)',
-            lineHeight: 1.1,
-            marginBottom: '1.5rem',
-            animation: 'slideUp 1s ease forwards',
-            textShadow: '0 4px 20px rgba(0,0,0,0.6)',
-            maxWidth: '900px'
-          }}
-        >
-          {slides[currentSlide].title}
-        </h1>
-
-        <p
-          style={{
-            fontSize: 'clamp(1rem, 1.8vw, 1.25rem)',
-            color: 'var(--text-secondary)',
-            maxWidth: '650px',
-            margin: '0 auto 2.5rem',
-            animation: 'slideUp 1.2s ease forwards',
-            lineHeight: 1.6,
-            textShadow: '0 2px 10px rgba(0,0,0,0.5)',
-          }}
-        >
-          {slides[currentSlide].description}
-        </p>
-
-        {/* CTA Buttons */}
-        <div 
-          style={{ 
-            display: 'flex', 
-            flexWrap: 'wrap', 
-            justifyContent: 'center', 
-            gap: '1.25rem',
-            animation: 'slideUp 1.4s ease forwards'
-          }}
-        >
-          <a href="#menu" className="btn-primary" style={{ animation: 'glowPulse 3s infinite' }}>
-            <span>Explore Menu</span>
-          </a>
-          <a href="#contact" className="btn-secondary">
-            <span>Contact Us</span>
-          </a>
-        </div>
-      </div>
 
       {/* Manual Slide Navigation Arrows */}
       <button
