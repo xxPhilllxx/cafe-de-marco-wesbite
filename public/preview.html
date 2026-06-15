@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Café de Marco - Image Asset Gallery</title>
+  <style>
+    body {
+      background-color: #0c0c0e;
+      color: #f4f4f7;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 2rem;
+    }
+    h1 {
+      font-family: Georgia, serif;
+      color: #c5a880;
+      border-bottom: 1px solid rgba(197, 168, 128, 0.2);
+      padding-bottom: 1rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background-color: #121216;
+      border: 1px solid rgba(197, 168, 128, 0.15);
+      border-radius: 8px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: contain;
+      background-color: #000;
+      border-radius: 4px;
+    }
+    .filename {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: #a1a1aa;
+      word-break: break-all;
+      text-align: center;
+    }
+    .dimensions {
+      font-size: 0.75rem;
+      color: #71717a;
+      margin-top: 0.2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Café de Marco - Uploaded Image Asset Gallery</h1>
+  <p>Use this gallery to identify the filenames of the images you want to place in the Hero slider, About section, or Menu container.</p>
+  
+  <div class="gallery" id="gallery-container">
+    <!-- Image cards will be generated here -->
+  </div>
+
+  <script>
+    // List of files in public/images
+    const images = [
+      "00866959-a84e-4c27-b7e4-88431e1e2fed.jfif",
+      "13b102b4-26c7-42de-8c70-8bc3416db52a.jfif",
+      "18c47053-34e4-4358-8d66-45c36ae6559c.jfif",
+      "29f5f7c1-5466-4d31-ae77-c9345dd3be7a.jfif",
+      "3fcdba8c-9583-400f-9ea8-c994cba1d321.jfif",
+      "3fe93259-300f-4763-9247-89e350475b4d.jfif",
+      "45e96ced-e30e-4913-8c14-3372f5cd9b5a.jfif",
+      "4e0049f3-ae37-489d-9eca-c4146561a296.jfif",
+      "51c92452-acd9-4bf9-92c6-e1b83a94a62b.jfif",
+      "5dd73d9a-c487-41ea-bf9d-dd8d00e708fd.jfif",
+      "701871de-6c62-468e-9445-76eec519fe4c.jfif",
+      "7393036e-3f1a-4972-9c0f-cd5c68a29ef0.jfif",
+      "76a72424-d950-435d-b334-0b0f94592b57.jfif",
+      "7a04b73f-a791-49ed-9374-6dc5d6dfa215.jfif",
+      "8a517815-94f4-48d9-9692-26d404ca9912.jfif",
+      "9395f6a0-d48e-41f3-8bed-90490b81e60b.jfif",
+      "9ca74672-a629-4e3f-a258-9e75583385d4.jfif",
+      "9db579f8-eaa0-416e-bb08-6f7e22c0eefb.jfif",
+      "9eac646f-ef56-45f0-9a7e-f08d92bf5337.jfif",
+      "afe67860-d7a7-490e-a3fd-39971a2f5fec.jfif",
+      "c96faf7a-6f4d-47f6-af2f-d1f50d1f6e10.jfif",
+      "cafe-de-marco-AF1QipM1lQmbmC1qevMhvU0jr74RNbzTG8zyiIlkgxvD~2.jpg",
+      "cafe-de-marco-AF1QipMKD9Wm9NJCsIdKta_279DwSWszZfk5l6tf245p~2.jpg",
+      "cafe-de-marco-AF1QipMoz9JUvItK1mbJDyytusn3z_J2oTwaf5CErKMw~2.jpg",
+      "cafe-de-marco-AF1QipNVNCykl8E50zcVB90ESJgif1ztPOP38iacIzPa~3.jpg",
+      "cafe-de-marco-AF1QipNjCS3ylKup3E6-3BHYCCn-EftlelZhQrNfErwv~2.jpg",
+      "cafe-de-marco-AF1QipNoHbtAQzpB0LP33l_0gXr0dmfugTu4ymwQWet6~2.jpg",
+      "cafe-de-marco-AF1QipOUsqU4d-3UdVUL9QTOzNuwOErfmtq-hADhzga7~2.jpg",
+      "cafe-de-marco-AF1QipP2eFK3f9J6Fu918hHg33g2JWstTHr-7FuoT2ym~2.jpg",
+      "df2029a5-353c-4a5f-b479-3b65cf6cf22c.jfif",
+      "e26488b0-9041-4daf-812f-7b1cf50051d7.jfif",
+      "e660292d-617f-4ce8-9663-e99526f38d21.jfif",
+      "f2e25439-a018-4d88-a9f1-9a7aaee189b6.jfif",
+      "f438d0d7-a685-4122-b1c6-87d7fd260ea6.jfif",
+      "f4e80917-9755-455f-875e-40f83b18eaaf (1).jfif",
+      "f7362d00-7fae-4b12-ac94-c2b077b0ca0b.jfif",
+      "fae5b854-3d79-4fc5-ba1f-4de0b39b642d.jfif",
+      "hero_steak.png",
+      "jumbo_prawns.png",
+      "menu_redacted_1.jpg",
+      "menu_redacted_2.jpg",
+      "menu_redacted_3.jpg",
+      "menu_redacted_4.jpg",
+      "menu_redacted_5.jpg"
+    ];
+
+    const container = document.getElementById("gallery-container");
+    images.forEach(filename => {
+      const card = document.createElement("div");
+      card.className = "card";
+      
+      const img = document.createElement("img");
+      img.src = `/images/${filename}`;
+      img.alt = filename;
+      
+      const fileLabel = document.createElement("div");
+      fileLabel.className = "filename";
+      fileLabel.textContent = filename;
+      
+      card.appendChild(img);
+      card.appendChild(fileLabel);
+      container.appendChild(card);
+    });
+  </script>
+</body>
+</html>
