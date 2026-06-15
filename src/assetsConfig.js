@@ -109,24 +109,20 @@ export const restaurantConfig = {
         items: [
           {
             name: "Lobster Bisque",
-            price: "16",
             description: "Rich, creamy, and slow-simmered with premium cognac and a generous garnish of fresh lobster chunks.",
             tags: ["Signature", "Gluten-Free Available"]
           },
           {
             name: "Caprese Salad",
-            price: "15",
             description: "Vine-ripened tomatoes, fresh buffalo mozzarella, fragrant basil leaves, finished with cold-pressed olive oil and balsamic glaze.",
             tags: ["Vegetarian"]
           },
           {
             name: "Sandy's Favorite Salad",
-            price: "14",
             description: "Crisp mixed greens, fresh seasonal berries, toasted almonds, and crumbled goat cheese tossed in house vinaigrette."
           },
           {
             name: "De Marco Sampler Platter",
-            price: "24",
             description: "A perfect sharing plate featuring a selection of artisanal baked appetizers and crispy calamari."
           }
         ]
@@ -137,19 +133,16 @@ export const restaurantConfig = {
         items: [
           {
             name: "House Specialty Jumbo Prawns",
-            price: "49",
             description: "Our legendary specialty. Colossal prawns prepared like lobster, incredibly tender, and served with a flavorful Tripletail Mango reduction.",
             tags: ["Famous", "House Specialty"]
           },
           {
             name: "Tripletail 'De Marco Style'",
-            price: "42",
             description: "Pristine Gulf caught Tripletail, delicately pan-seared and topped with our signature white wine citrus herb emulsion.",
             tags: ["Fresh Catch"]
           },
           {
             name: "Macadamia Catch of the Day (Mahi Mahi)",
-            price: "39",
             description: "Freshly caught Mahi Mahi crusted with sweet macadamia nuts, baked golden brown, and served with coconut ginger sauce."
           }
         ]
@@ -160,23 +153,19 @@ export const restaurantConfig = {
         items: [
           {
             name: "Prime Aged Ribeye",
-            price: "54",
             description: "16oz of hand-selected USDA Prime Ribeye, marbled for maximum flavor, wet-aged 28 days, and fire-grilled to order.",
             tags: ["Prime"]
           },
           {
             name: "Slow-Braised Lamb Osso Buco",
-            price: "46",
             description: "Tender, fall-off-the-bone lamb shank slow-braised in red wine, root vegetables, and aromatic spices over saffron risotto."
           },
           {
             name: "Chicken Francese",
-            price: "32",
             description: "Tender breast of chicken egg-battered and sautéed in a delicate lemon, butter, and white wine pan-sauce."
           },
           {
             name: "Artisanal Vegetarian Risotto",
-            price: "28",
             description: "Creamy Arborio rice slow-cooked with fresh local seasonal mushrooms, roasted asparagus, and aged Parmesan.",
             tags: ["Vegetarian"]
           }

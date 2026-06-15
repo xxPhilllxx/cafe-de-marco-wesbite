@@ -94,8 +94,8 @@ export default function MenuSection() {
                       animation: 'fadeIn 0.4s ease'
                     }}
                   >
-                    {/* Name and price row */}
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '0.5rem' }}>
+                    {/* Name row */}
+                    <div style={{ display: 'flex', alignItems: 'baseline', marginBottom: '0.5rem' }}>
                       <h4 
                         className="serif-font" 
                         style={{ 
@@ -113,16 +113,6 @@ export default function MenuSection() {
                           </span>
                         )}
                       </h4>
-                      <span 
-                        style={{ 
-                          color: 'var(--color-gold)', 
-                          fontWeight: '600', 
-                          fontSize: '1.1rem',
-                          fontFamily: 'var(--font-serif)'
-                        }}
-                      >
-                        ${item.price}
-                      </span>
                     </div>
                     {/* Description */}
                     <p style={{ fontSize: '0.88rem', color: 'var(--text-secondary)' }}>

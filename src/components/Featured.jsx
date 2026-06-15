@@ -6,7 +6,6 @@ export default function Featured() {
   const specialties = [
     {
       title: "Famous Jumbo Prawns",
-      price: "$49",
       subtitle: "The Legendary House Specialty",
       description: "Colossal prawns prepared masterfully in a style similar to lobster—exceptionally tender, succulent, and served with our signature sweet Tripletail Mango reduction sauce.",
       image: "/images/jumbo_prawns.png", // Delicious prawns/shrimp dish
@@ -14,7 +13,6 @@ export default function Featured() {
     },
     {
       title: "Rich Lobster Bisque",
-      price: "$16",
       subtitle: "Slow-Simmered Perfection",
       description: "A decadent, velvety, slow-cooked soup infused with premium Cognac, local aromatic root herbs, and garnished generously with buttery chunks of fresh lobster.",
       image: "/images/cafe-de-marco-AF1QipOUsqU4d-3UdVUL9QTOzNuwOErfmtq-hADhzga7~2.jpg", // Elegant soup bowl
@@ -22,7 +20,6 @@ export default function Featured() {
     },
     {
       title: "Gulf Tripletail 'De Marco'",
-      price: "$42",
       subtitle: "Primal Fresh Catch",
       description: "Local wild-caught Florida Tripletail, pan-sautéed in traditional cast iron and drizzled with an exquisite lemon butter white wine citrus caper reduction.",
       image: "/images/cafe-de-marco-AF1QipNoHbtAQzpB0LP33l_0gXr0dmfugTu4ymwQWet6~2.jpg", // Pan seared fish
@@ -99,24 +96,6 @@ export default function Featured() {
                   onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
                   onMouseLeave={(e) => e.target.style.transform = 'scale(1.0)'}
                 />
-                {/* Visual price tag */}
-                <div
-                  style={{
-                    position: 'absolute',
-                    bottom: '1rem',
-                    right: '1rem',
-                    backgroundColor: 'var(--bg-obsidian)',
-                    border: '1px solid rgba(197, 168, 128, 0.3)',
-                    color: 'var(--color-gold)',
-                    fontFamily: 'var(--font-serif)',
-                    fontSize: '1.25rem',
-                    padding: '0.4rem 0.9rem',
-                    borderRadius: '4px',
-                    boxShadow: '0 4px 10px rgba(0,0,0,0.5)',
-                  }}
-                >
-                  {item.price}
-                </div>
               </div>
 
               {/* Card Details */}
