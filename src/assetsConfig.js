@@ -103,7 +103,7 @@ export const restaurantConfig = {
             tags: ["Vegetarian"]
           },
           {
-            name: "Sandy's Favorite Salad",
+            name: "Café de Marco's Favorite Salad",
             description: "Crisp mixed greens, fresh seasonal berries, toasted almonds, and crumbled goat cheese tossed in house vinaigrette."
           },
           {
