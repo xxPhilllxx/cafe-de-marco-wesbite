@@ -5,25 +5,25 @@ export default function Featured() {
   // Curated list of signature specialties extracted from the reviews & original copy
   const specialties = [
     {
-      title: "Famous Jumbo Prawns",
-      subtitle: "The Legendary House Specialty",
-      description: "Colossal prawns prepared masterfully in a style similar to lobster—exceptionally tender, succulent, and served with our signature sweet Tripletail Mango reduction sauce.",
+      title: "USDA Prime Ribeye",
+      subtitle: "Fire-Grilled Premium Cut",
+      description: "A hand-selected USDA Prime Ribeye, beautifully marbled for rich flavor, aged to tender perfection, and fire-grilled to your precise preference.",
       image: "/images/Gemini_Generated_Image_elzxvtelzxvtelzx~2.png",
-      tag: "Most Popular",
+      tag: "Premium Cut",
     },
     {
-      title: "Rich Lobster Bisque",
-      subtitle: "Slow-Simmered Perfection",
-      description: "A decadent, velvety, slow-cooked soup infused with premium Cognac, local aromatic root herbs, and garnished generously with buttery chunks of fresh lobster.",
+      title: "Alaskan King Crab Legs",
+      subtitle: "Sweet & Succulent Seafood",
+      description: "Colossal Alaskan King Crab Legs, steamed to lock in their natural sweetness, served piping hot with drawn butter and fresh lemon wedges.",
       image: "/images/Gemini_Generated_Image_f5hamdf5hamdf5ha~2.png",
-      tag: "Chef's 10/10 Choice",
+      tag: "Guest Favorite",
     },
     {
-      title: "Gulf Tripletail 'De Marco'",
-      subtitle: "Primal Fresh Catch",
-      description: "Local wild-caught Florida Tripletail, pan-sautéed in traditional cast iron and drizzled with an exquisite lemon butter white wine citrus caper reduction.",
+      title: "Signature NY Cheesecake",
+      subtitle: "A Decadent Sweet Ending",
+      description: "A classic New York-style cheesecake, exceptionally rich and creamy, baked on a sweet graham cracker crust and topped with a fresh strawberry glaze.",
       image: "/images/Gemini_Generated_Image_g5ejleg5ejleg5ej~2.png",
-      tag: "Fresh Caught Daily",
+      tag: "Chef's Dessert Selection",
     }
   ];
 
