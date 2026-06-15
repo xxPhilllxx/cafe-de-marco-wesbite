@@ -35,61 +35,46 @@ export const restaurantConfig = {
   images: {
     heroSlides: [
       {
-        url: "/images/hero_steak.png", // Elegant Steak
+        url: "/images/Gemini_Generated_Image_qt557vqt557vqt55~2.png",
         title: "Savor the Finest Cuts",
         description: "Perfectly seasoned prime steaks grilled to absolute perfection."
       },
       {
-        url: "/images/cafe-de-marco-AF1QipM1lQmbmC1qevMhvU0jr74RNbzTG8zyiIlkgxvD~2.jpg", // Real Cafe de Marco Seafood
+        url: "/images/Gemini_Generated_Image_sctzmssctzmssctz~2.png",
         title: "Famous Gulf Seafood",
         description: "Fresh coastal catches prepared with decades of culinary passion."
       },
       {
-        url: "/images/cafe-de-marco-AF1QipNjCS3ylKup3E6-3BHYCCn-EftlelZhQrNfErwv~2.jpg", // Real Cafe de Marco building
+        url: "/images/Gemini_Generated_Image_5sm2kk5sm2kk5sm2~2.png",
         title: "Elegance & Heritage",
         description: "Located in the historic district of Old Marco Island, welcoming you with timeless charm."
       }
     ],
-    aboutImage: "/images/cafe-de-marco-AF1QipNVNCykl8E50zcVB90ESJgif1ztPOP38iacIzPa~3.jpg", // Real Cafe de Marco dining tables
-    menuPlaceholder: "", // Blank if not uploaded yet. If empty, the component shows a beautiful empty container layout.
-    menuPdfUrl: "/docs/cafe-de-marco-menu.pdf", // Path to the uploaded Menu PDF
+    aboutImage: "/images/Gemini_Generated_Image_7zrzfg7zrzfg7zrz~2.png",
+    menuPlaceholder: "",
+    menuPdfUrl: "/docs/cafe-de-marco-menu.pdf",
     menuRedacted: [
-      "/images/menu_redacted_1.jpg",
-      "/images/menu_redacted_2.jpg",
-      "/images/menu_redacted_3.jpg",
-      "/images/menu_redacted_4.jpg",
-      "/images/menu_redacted_5.jpg"
+      "/images/menu_redacted_1.jpg"
     ],
     gallery: [
-      "/images/df2029a5-353c-4a5f-b479-3b65cf6cf22c.jfif",
-      "/images/9db579f8-eaa0-416e-bb08-6f7e22c0eefb.jfif",
-      "/images/e660292d-617f-4ce8-9663-e99526f38d21.jfif",
-      "/images/f2e25439-a018-4d88-a9f1-9a7aaee189b6.jfif",
-      "/images/76a72424-d950-435d-b334-0b0f94592b57.jfif",
-      "/images/00866959-a84e-4c27-b7e4-88431e1e2fed.jfif",
-      "/images/13b102b4-26c7-42de-8c70-8bc3416db52a.jfif",
-      "/images/18c47053-34e4-4358-8d66-45c36ae6559c.jfif",
-      "/images/29f5f7c1-5466-4d31-ae77-c9345dd3be7a.jfif",
-      "/images/3fcdba8c-9583-400f-9ea8-c994cba1d321.jfif",
-      "/images/7393036e-3f1a-4972-9c0f-cd5c68a29ef0.jfif",
-      "/images/9eac646f-ef56-45f0-9a7e-f08d92bf5337.jfif",
-      "/images/4e0049f3-ae37-489d-9eca-c4146561a296.jfif",
-      "/images/51c92452-acd9-4bf9-92c6-e1b83a94a62b.jfif",
-      "/images/701871de-6c62-468e-9445-76eec519fe4c.jfif",
-      "/images/7a04b73f-a791-49ed-9374-6dc5d6dfa215.jfif",
-      "/images/8a517815-94f4-48d9-9692-26d404ca9912.jfif",
-      "/images/9ca74672-a629-4e3f-a258-9e75583385d4.jfif",
-      "/images/afe67860-d7a7-490e-a3fd-39971a2f5fec.jfif",
-      "/images/c96faf7a-6f4d-47f6-af2f-d1f50d1f6e10.jfif",
-      "/images/cafe-de-marco-AF1QipMKD9Wm9NJCsIdKta_279DwSWszZfk5l6tf245p~2.jpg",
-      "/images/cafe-de-marco-AF1QipMoz9JUvItK1mbJDyytusn3z_J2oTwaf5CErKMw~2.jpg",
-      "/images/cafe-de-marco-AF1QipNoHbtAQzpB0LP33l_0gXr0dmfugTu4ymwQWet6~2.jpg",
-      "/images/cafe-de-marco-AF1QipOUsqU4d-3UdVUL9QTOzNuwOErfmtq-hADhzga7~2.jpg",
-      "/images/cafe-de-marco-AF1QipP2eFK3f9J6Fu918hHg33g2JWstTHr-7FuoT2ym~2.jpg",
-      "/images/e26488b0-9041-4daf-812f-7b1cf50051d7.jfif",
-      "/images/f438d0d7-a685-4122-b1c6-87d7fd260ea6.jfif",
-      "/images/f4e80917-9755-455f-875e-40f83b18eaaf (1).jfif",
-      "/images/f7362d00-7fae-4b12-ac94-c2b077b0ca0b.jfif"
+      "/images/Gemini_Generated_Image_5sm2kk5sm2kk5sm2~2.png",
+      "/images/Gemini_Generated_Image_7zrzfg7zrzfg7zrz~2.png",
+      "/images/Gemini_Generated_Image_elzxvtelzxvtelzx~2.png",
+      "/images/Gemini_Generated_Image_f5hamdf5hamdf5ha~2.png",
+      "/images/Gemini_Generated_Image_g5ejleg5ejleg5ej~2.png",
+      "/images/Gemini_Generated_Image_hjmio6hjmio6hjmi~2.png",
+      "/images/Gemini_Generated_Image_jeaxwwjeaxwwjeax~2.png",
+      "/images/Gemini_Generated_Image_jzj7n6jzj7n6jzj7~2.png",
+      "/images/Gemini_Generated_Image_nla7ztnla7ztnla7~2.png",
+      "/images/Gemini_Generated_Image_qt557vqt557vqt55~2.png",
+      "/images/Gemini_Generated_Image_sctzmssctzmssctz~2.png",
+      "/images/Gemini_Generated_Image_t1r0t0t1r0t0t1r0~2.png",
+      "/images/Gemini_Generated_Image_u6urtvu6urtvu6ur~2.png",
+      "/images/Messenger_creation_1CC66A34-0E8A-4906-BDE8-126A5C6B8803~2.jpeg",
+      "/images/Messenger_creation_3460C4D6-081D-4B2A-A78A-8948C7513160~2.jpeg",
+      "/images/Messenger_creation_45B904A8-CEF9-4AA0-BC64-69F3279AF340~2.jpeg",
+      "/images/Messenger_creation_5801D3FD-BF9E-482C-8949-CB58E9682DFB~2.jpeg",
+      "/images/Messenger_creation_62EB044D-ECCB-4A9C-800A-3FC8CA5B3DED~2.jpeg"
     ]
   },
 

@@ -227,36 +227,38 @@ export default function MenuSection() {
                   </div>
 
                   {/* Page Selector Tabs */}
-                  <div 
-                    style={{ 
-                      display: 'flex', 
-                      justifyContent: 'center', 
-                      gap: '0.4rem', 
-                      flexWrap: 'wrap',
-                      marginBottom: '1.5rem' 
-                    }}
-                  >
-                    {restaurantConfig.images.menuRedacted.map((_, idx) => (
-                      <button
-                        key={idx}
-                        onClick={() => setActivePage(idx)}
-                        style={{
-                          backgroundColor: activePage === idx ? 'var(--color-gold)' : 'rgba(9, 9, 11, 0.6)',
-                          color: activePage === idx ? '#09090b' : 'var(--text-secondary)',
-                          border: '1px solid',
-                          borderColor: activePage === idx ? 'var(--color-gold)' : 'rgba(197, 168, 128, 0.15)',
-                          padding: '0.35rem 0.75rem',
-                          borderRadius: '4px',
-                          fontSize: '0.75rem',
-                          fontWeight: '600',
-                          cursor: 'pointer',
-                          transition: 'var(--transition-fast)'
-                        }}
-                      >
-                        Page {idx + 1}
-                      </button>
-                    ))}
-                  </div>
+                  {restaurantConfig.images.menuRedacted.length > 1 && (
+                    <div 
+                      style={{ 
+                        display: 'flex', 
+                        justifyContent: 'center', 
+                        gap: '0.4rem', 
+                        flexWrap: 'wrap',
+                        marginBottom: '1.5rem' 
+                      }}
+                    >
+                      {restaurantConfig.images.menuRedacted.map((_, idx) => (
+                        <button
+                          key={idx}
+                          onClick={() => setActivePage(idx)}
+                          style={{
+                            backgroundColor: activePage === idx ? 'var(--color-gold)' : 'rgba(9, 9, 11, 0.6)',
+                            color: activePage === idx ? '#09090b' : 'var(--text-secondary)',
+                            border: '1px solid',
+                            borderColor: activePage === idx ? 'var(--color-gold)' : 'rgba(197, 168, 128, 0.15)',
+                            padding: '0.35rem 0.75rem',
+                            borderRadius: '4px',
+                            fontSize: '0.75rem',
+                            fontWeight: '600',
+                            cursor: 'pointer',
+                            transition: 'var(--transition-fast)'
+                          }}
+                        >
+                          Page {idx + 1}
+                        </button>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ) : (
                 <div style={{ padding: '2rem 0', color: 'var(--text-muted)' }}>

@@ -8,21 +8,21 @@ export default function Featured() {
       title: "Famous Jumbo Prawns",
       subtitle: "The Legendary House Specialty",
       description: "Colossal prawns prepared masterfully in a style similar to lobster—exceptionally tender, succulent, and served with our signature sweet Tripletail Mango reduction sauce.",
-      image: "/images/jumbo_prawns.png", // Delicious prawns/shrimp dish
+      image: "/images/Gemini_Generated_Image_elzxvtelzxvtelzx~2.png",
       tag: "Most Popular",
     },
     {
       title: "Rich Lobster Bisque",
       subtitle: "Slow-Simmered Perfection",
       description: "A decadent, velvety, slow-cooked soup infused with premium Cognac, local aromatic root herbs, and garnished generously with buttery chunks of fresh lobster.",
-      image: "/images/cafe-de-marco-AF1QipOUsqU4d-3UdVUL9QTOzNuwOErfmtq-hADhzga7~2.jpg", // Elegant soup bowl
+      image: "/images/Gemini_Generated_Image_f5hamdf5hamdf5ha~2.png",
       tag: "Chef's 10/10 Choice",
     },
     {
       title: "Gulf Tripletail 'De Marco'",
       subtitle: "Primal Fresh Catch",
       description: "Local wild-caught Florida Tripletail, pan-sautéed in traditional cast iron and drizzled with an exquisite lemon butter white wine citrus caper reduction.",
-      image: "/images/cafe-de-marco-AF1QipNoHbtAQzpB0LP33l_0gXr0dmfugTu4ymwQWet6~2.jpg", // Pan seared fish
+      image: "/images/Gemini_Generated_Image_g5ejleg5ejleg5ej~2.png",
       tag: "Fresh Caught Daily",
     }
   ];
