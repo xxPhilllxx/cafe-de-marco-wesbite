@@ -35,46 +35,46 @@ export const restaurantConfig = {
   images: {
     heroSlides: [
       {
-        url: "/images/Gemini_Generated_Image_qt557vqt557vqt55~2.png",
+        url: "/images/hero_1.png",
         title: "Savor the Finest Cuts",
         description: "Perfectly seasoned prime steaks grilled to absolute perfection."
       },
       {
-        url: "/images/Gemini_Generated_Image_sctzmssctzmssctz~2.png",
+        url: "/images/hero_2.png",
         title: "Famous Gulf Seafood",
         description: "Fresh coastal catches prepared with decades of culinary passion."
       },
       {
-        url: "/images/Gemini_Generated_Image_5sm2kk5sm2kk5sm2~2.png",
+        url: "/images/hero_3.png",
         title: "Elegance & Heritage",
         description: "Located in the historic district of Old Marco Island, welcoming you with timeless charm."
       }
     ],
-    aboutImage: "/images/Gemini_Generated_Image_7zrzfg7zrzfg7zrz~2.png",
+    aboutImage: "/images/about.png",
     menuPlaceholder: "",
     menuPdfUrl: "/docs/cafe-de-marco-menu.pdf",
     menuRedacted: [
-      "/images/cafedemarcoMenunoprice.jpeg"
+      "/images/menu_sheet.jpeg"
     ],
     gallery: [
-      "/images/Gemini_Generated_Image_5sm2kk5sm2kk5sm2~2.png",
-      "/images/Gemini_Generated_Image_7zrzfg7zrzfg7zrz~2.png",
-      "/images/Gemini_Generated_Image_elzxvtelzxvtelzx~2.png",
-      "/images/Gemini_Generated_Image_f5hamdf5hamdf5ha~2.png",
-      "/images/Gemini_Generated_Image_g5ejleg5ejleg5ej~2.png",
-      "/images/Gemini_Generated_Image_hjmio6hjmio6hjmi~2.png",
-      "/images/Gemini_Generated_Image_jeaxwwjeaxwwjeax~2.png",
-      "/images/Gemini_Generated_Image_jzj7n6jzj7n6jzj7~2.png",
-      "/images/Gemini_Generated_Image_nla7ztnla7ztnla7~2.png",
-      "/images/Gemini_Generated_Image_qt557vqt557vqt55~2.png",
-      "/images/Gemini_Generated_Image_sctzmssctzmssctz~2.png",
-      "/images/Gemini_Generated_Image_t1r0t0t1r0t0t1r0~2.png",
-      "/images/Gemini_Generated_Image_u6urtvu6urtvu6ur~2.png",
-      "/images/Messenger_creation_1CC66A34-0E8A-4906-BDE8-126A5C6B8803~2.jpeg",
-      "/images/Messenger_creation_3460C4D6-081D-4B2A-A78A-8948C7513160~2.jpeg",
-      "/images/Messenger_creation_45B904A8-CEF9-4AA0-BC64-69F3279AF340~2.jpeg",
-      "/images/Messenger_creation_5801D3FD-BF9E-482C-8949-CB58E9682DFB~2.jpeg",
-      "/images/Messenger_creation_62EB044D-ECCB-4A9C-800A-3FC8CA5B3DED~2.jpeg"
+      "/images/hero_1.png",
+      "/images/hero_2.png",
+      "/images/hero_3.png",
+      "/images/about.png",
+      "/images/specialty_ribeye.png",
+      "/images/specialty_crab_legs.png",
+      "/images/specialty_cheesecake.png",
+      "/images/gallery_1.png",
+      "/images/gallery_2.png",
+      "/images/gallery_3.png",
+      "/images/gallery_4.png",
+      "/images/gallery_5.png",
+      "/images/gallery_6.png",
+      "/images/gallery_7.jpeg",
+      "/images/gallery_8.jpeg",
+      "/images/gallery_9.jpeg",
+      "/images/gallery_10.jpeg",
+      "/images/gallery_11.jpeg"
     ]
   },
 

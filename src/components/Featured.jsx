@@ -8,21 +8,21 @@ export default function Featured() {
       title: "USDA Prime Ribeye",
       subtitle: "Fire-Grilled Premium Cut",
       description: "A hand-selected USDA Prime Ribeye, beautifully marbled for rich flavor, aged to tender perfection, and fire-grilled to your precise preference.",
-      image: "/images/Gemini_Generated_Image_elzxvtelzxvtelzx~2.png",
+      image: "/images/specialty_ribeye.png",
       tag: "Premium Cut",
     },
     {
       title: "Alaskan King Crab Legs",
       subtitle: "Sweet & Succulent Seafood",
       description: "Colossal Alaskan King Crab Legs, steamed to lock in their natural sweetness, served piping hot with drawn butter and fresh lemon wedges.",
-      image: "/images/Gemini_Generated_Image_f5hamdf5hamdf5ha~2.png",
+      image: "/images/specialty_crab_legs.png",
       tag: "Guest Favorite",
     },
     {
       title: "Signature NY Cheesecake",
       subtitle: "A Decadent Sweet Ending",
       description: "A classic New York-style cheesecake, exceptionally rich and creamy, baked on a sweet graham cracker crust and topped with a fresh strawberry glaze.",
-      image: "/images/Gemini_Generated_Image_g5ejleg5ejleg5ej~2.png",
+      image: "/images/specialty_cheesecake.png",
       tag: "Chef's Dessert Selection",
     }
   ];
