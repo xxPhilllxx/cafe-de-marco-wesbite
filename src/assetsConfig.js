@@ -35,11 +35,6 @@ export const restaurantConfig = {
   images: {
     heroSlides: [
       {
-        url: "/images/hero_1.png",
-        title: "Savor the Finest Cuts",
-        description: "Perfectly seasoned prime steaks grilled to absolute perfection."
-      },
-      {
         url: "/images/hero_2.png",
         title: "Famous Gulf Seafood",
         description: "Fresh coastal catches prepared with decades of culinary passion."
@@ -57,11 +52,9 @@ export const restaurantConfig = {
       "/images/menu_sheet.jpeg"
     ],
     gallery: [
-      "/images/hero_1.png",
       "/images/hero_2.png",
       "/images/hero_3.png",
       "/images/about.png",
-      "/images/specialty_ribeye.png",
       "/images/specialty_crab_legs.png",
       "/images/specialty_cheesecake.png",
       "/images/gallery_1.png",
