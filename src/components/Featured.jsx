@@ -5,11 +5,11 @@ export default function Featured() {
   // Curated list of signature specialties extracted from the reviews & original copy
   const specialties = [
     {
-      title: "USDA Prime Ribeye",
-      subtitle: "Fire-Grilled Premium Cut",
-      description: "A hand-selected USDA Prime Ribeye, beautifully marbled for rich flavor, aged to tender perfection, and fire-grilled to your precise preference.",
-      image: "/images/specialty_ribeye.png",
-      tag: "Premium Cut",
+      title: "Oysters Rockefeller",
+      subtitle: "Award-Winning Recipe",
+      description: "Our celebrated award-winning recipe featuring a rich blend of bacon, spinach, a select blend of cheeses, and a splash of anisette, baked to bubbling perfection.",
+      image: "/images/specialty_oysters.jpg",
+      tag: "Award Winner",
     },
     {
       title: "Alaskan King Crab Legs",

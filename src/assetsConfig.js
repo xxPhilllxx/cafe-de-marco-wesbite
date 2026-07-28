@@ -35,9 +35,9 @@ export const restaurantConfig = {
   images: {
     heroSlides: [
       {
-        url: "/images/hero_1.png",
-        title: "Savor the Finest Cuts",
-        description: "Perfectly seasoned prime steaks grilled to absolute perfection."
+        url: "/images/specialty_oysters.jpg",
+        title: "Award-Winning Oysters",
+        description: "Our celebrated Oysters Rockefeller baked with spinach, bacon, and cheese."
       },
       {
         url: "/images/hero_2.png",
@@ -57,10 +57,10 @@ export const restaurantConfig = {
       "/images/menu_sheet.jpeg"
     ],
     gallery: [
+      "/images/specialty_oysters.jpg",
       "/images/hero_2.png",
       "/images/hero_3.png",
       "/images/about.png",
-      "/images/specialty_ribeye.png",
       "/images/specialty_crab_legs.png",
       "/images/specialty_cheesecake.png",
       "/images/gallery_1.png",
@@ -91,6 +91,11 @@ export const restaurantConfig = {
         id: "starters",
         name: "Appetizers & Starters",
         items: [
+          {
+            name: "Oysters Rockefeller",
+            description: "Award-winning recipe baked with a rich blend of bacon, spinach, cheeses, and anisette.",
+            tags: ["Award Winner", "Signature"]
+          },
           {
             name: "Lobster Bisque",
             description: "Rich, creamy, and slow-simmered with premium cognac and a generous garnish of fresh lobster chunks.",
@@ -135,11 +140,6 @@ export const restaurantConfig = {
         id: "steaks",
         name: "Steaks & Entrées",
         items: [
-          {
-            name: "Prime Aged Ribeye",
-            description: "16oz of hand-selected USDA Prime Ribeye, marbled for maximum flavor, wet-aged 28 days, and fire-grilled to order.",
-            tags: ["Prime"]
-          },
           {
             name: "Slow-Braised Lamb Osso Buco",
             description: "Tender, fall-off-the-bone lamb shank slow-braised in red wine, root vegetables, and aromatic spices over saffron risotto."
