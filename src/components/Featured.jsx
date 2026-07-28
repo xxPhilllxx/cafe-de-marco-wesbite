@@ -8,7 +8,7 @@ export default function Featured() {
       title: "Oysters Rockefeller",
       subtitle: "Award-Winning Recipe",
       description: "Our celebrated award-winning recipe featuring a rich blend of bacon, spinach, a select blend of cheeses, and a splash of anisette, baked to bubbling perfection.",
-      image: "/images/specialty_oysters.jpg",
+      image: "/images/gallery_1.png",
       tag: "Award Winner",
     },
     {
