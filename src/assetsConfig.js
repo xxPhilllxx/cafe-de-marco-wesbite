@@ -57,7 +57,6 @@ export const restaurantConfig = {
       "/images/menu_sheet.jpeg"
     ],
     gallery: [
-      "/images/hero_1.png",
       "/images/hero_2.png",
       "/images/hero_3.png",
       "/images/about.png",

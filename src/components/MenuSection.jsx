@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Download, FileText, CheckCircle, Upload, Eye } from 'lucide-react';
+import { Download, FileText, CheckCircle, Upload, Eye, X } from 'lucide-react';
 import { restaurantConfig } from '../assetsConfig';
 
 export default function MenuSection() {
