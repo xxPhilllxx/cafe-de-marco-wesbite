@@ -69,7 +69,6 @@ export const restaurantConfig = {
       "/images/gallery_5.png",
       "/images/gallery_6.png",
       "/images/gallery_7.jpeg",
-      "/images/gallery_10.jpeg",
       "/images/gallery_11.jpeg"
     ]
   },
