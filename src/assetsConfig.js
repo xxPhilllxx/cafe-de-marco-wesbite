@@ -125,13 +125,9 @@ export const restaurantConfig = {
             tags: ["Famous", "House Specialty"]
           },
           {
-            name: "Tripletail 'De Marco Style'",
-            description: "Pristine Gulf caught Tripletail, delicately pan-seared and topped with our signature white wine citrus herb emulsion.",
-            tags: ["Fresh Catch"]
-          },
-          {
-            name: "Macadamia Catch of the Day (Mahi Mahi)",
-            description: "Freshly caught Mahi Mahi crusted with sweet macadamia nuts, baked golden brown, and served with coconut ginger sauce."
+            name: "Seasonal Catch of the Day",
+            description: "Our fresh local catch of the day, prepared in one of our signature styles depending on seasonality: 'De Marco Style' (pan-seared Gulf Tripletail with a white wine citrus herb emulsion) or 'Macadamia Crusted' (Mahi Mahi crusted with sweet macadamia nuts and coconut ginger sauce).",
+            tags: ["Fresh Catch", "Seasonal Selection"]
           }
         ]
       },
