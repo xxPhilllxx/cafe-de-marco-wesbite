@@ -19,9 +19,9 @@ export default function Featured() {
       tag: "Guest Favorite",
     },
     {
-      title: "Signature NY Cheesecake",
+      title: "Italian Ricotta Cheesecake",
       subtitle: "A Decadent Sweet Ending",
-      description: "A classic New York-style cheesecake, exceptionally rich and creamy, baked on a sweet graham cracker crust and topped with a fresh strawberry glaze.",
+      description: "A light and airy Italian-style cheesecake made with fresh ricotta, citrus zest, and a hint of vanilla, served with a fresh berry glaze.",
       image: "/images/specialty_cheesecake.png",
       tag: "Chef's Dessert Selection",
     }
