@@ -61,15 +61,13 @@ export const restaurantConfig = {
       "/images/hero_2.png",
       "/images/hero_3.png",
       "/images/about.png",
+      "/images/gallery_11.jpeg",
+      "/images/gallery_patio.jpg",
+      "/images/gallery_cannoli.jpg",
+      "/images/gallery_steak.jpg",
+      "/images/gallery_stained_glass.jpg",
       "/images/specialty_crab_legs.png",
-      "/images/specialty_cheesecake.png",
-      "/images/gallery_2.png",
-      "/images/gallery_3.png",
-      "/images/gallery_4.png",
-      "/images/gallery_5.png",
-      "/images/gallery_6.png",
-      "/images/gallery_7.jpeg",
-      "/images/gallery_11.jpeg"
+      "/images/specialty_cheesecake.png"
     ]
   },
 
