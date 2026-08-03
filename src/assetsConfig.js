@@ -35,7 +35,7 @@ export const restaurantConfig = {
   images: {
     heroSlides: [
       {
-        url: "/images/gallery_1.png",
+        url: "/images/specialty_oysters.png",
         title: "Award-Winning Oysters",
         description: "Our celebrated Oysters Rockefeller baked with spinach, bacon, and cheese."
       },
@@ -57,7 +57,7 @@ export const restaurantConfig = {
       "/images/menu_sheet.jpeg"
     ],
     gallery: [
-      "/images/gallery_1.png",
+      "/images/specialty_oysters.png",
       "/images/hero_2.png",
       "/images/hero_3.png",
       "/images/about.png",
