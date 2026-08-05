@@ -58,6 +58,10 @@ export const restaurantConfig = {
     ],
     gallery: [
       "/images/specialty_oysters.png",
+      "/images/gallery_lobster.jpg",
+      "/images/gallery_tuna_tartare.jpg",
+      "/images/gallery_mussels.jpg",
+      "/images/gallery_steak_mushrooms.jpg",
       "/images/hero_2.png",
       "/images/hero_3.png",
       "/images/about.png",
