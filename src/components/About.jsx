@@ -82,7 +82,7 @@ export default function About() {
             <div style={{ minHeight: '180px', color: 'var(--text-secondary)' }}>
               {activeTab === 'story' && (
                 <div style={{ animation: 'fadeIn 0.5s ease' }}>
-                  <p style={{ marginBottom: '1rem' }}>{about.story}</p>
+                  <p style={{ whiteSpace: 'pre-line', lineHeight: '1.7', marginBottom: '1rem' }}>{about.story}</p>
                   <p style={{ fontSize: '0.9rem', fontStyle: 'italic', color: 'var(--color-gold)', borderLeft: '2px solid var(--color-gold)', paddingLeft: '1rem', marginTop: '1.5rem' }}>
                     "Fine dining with a warm, welcoming atmosphere in Old Marco's historical district."
                   </p>
