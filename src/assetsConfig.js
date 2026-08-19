@@ -40,9 +40,14 @@ export const restaurantConfig = {
         description: "Our celebrated Oysters Rockefeller baked with spinach, bacon, and cheese."
       },
       {
-        url: "/images/hero_2.png",
+        url: "/images/gallery_lobster.jpg",
         title: "Famous Gulf Seafood",
         description: "Fresh coastal catches prepared with decades of culinary passion."
+      },
+      {
+        url: "/images/hero_2.png",
+        title: "House Specialty Jumbo Prawns",
+        description: "Our legendary specialty. Colossal prawns prepared like lobster, incredibly tender, and served with a flavorful Tripletail Mango reduction."
       },
       {
         url: "/images/hero_3.png",
@@ -60,6 +65,7 @@ export const restaurantConfig = {
     ],
     gallery: [
       "/images/specialty_oysters.png",
+      "/images/hero_2.png",
       "/images/gallery_lobster.jpg",
       "/images/gallery_tuna_tartare.jpg",
       "/images/gallery_mussels.jpg",
