@@ -140,11 +140,6 @@ export const restaurantConfig = {
           {
             name: "Chicken Francese",
             description: "Tender breast of chicken egg-battered and sautéed in a delicate lemon, butter, and white wine pan-sauce."
-          },
-          {
-            name: "Artisanal Vegetarian Risotto",
-            description: "Creamy Arborio rice slow-cooked with fresh local seasonal mushrooms, roasted asparagus, and aged Parmesan.",
-            tags: ["Vegetarian"]
           }
         ]
       }
