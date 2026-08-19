@@ -54,7 +54,9 @@ export const restaurantConfig = {
     menuPlaceholder: "",
     menuPdfUrl: "/docs/cafe-de-marco-menu.pdf",
     menuRedacted: [
-      "/images/menu_sheet.jpeg"
+      "/images/menu_page_1.jpg",
+      "/images/menu_page_2.jpg",
+      "/images/menu_page_3.jpg"
     ],
     gallery: [
       "/images/specialty_oysters.png",
