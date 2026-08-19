@@ -45,7 +45,7 @@ export const restaurantConfig = {
         description: "Fresh coastal catches prepared with decades of culinary passion."
       },
       {
-        url: "/images/hero_2.png",
+        url: "/images/gallery_prawns.jpg",
         title: "House Specialty Jumbo Prawns",
         description: "Our legendary specialty. Colossal prawns prepared like lobster, incredibly tender, and served with a flavorful Tripletail Mango reduction."
       },
@@ -65,7 +65,7 @@ export const restaurantConfig = {
     ],
     gallery: [
       "/images/specialty_oysters.png",
-      "/images/hero_2.png",
+      "/images/gallery_prawns.jpg",
       "/images/gallery_lobster.jpg",
       "/images/gallery_tuna_tartare.jpg",
       "/images/gallery_mussels.jpg",
