@@ -63,22 +63,127 @@ export const restaurantConfig = {
       "/images/menu_page_2.jpg",
       "/images/menu_page_3.jpg"
     ],
+
+    // Gallery category filter tabs
+    galleryCategories: [
+      { id: "all", name: "All Photos" },
+      { id: "specials", name: "Specials" },
+      { id: "starters", name: "Appetizers & Starters" },
+      { id: "seafood", name: "Seafood Selections" },
+      { id: "land_lovers", name: "Land Lovers Selections" },
+      { id: "desserts", name: "Desserts" },
+      { id: "wine", name: "Wine" },
+      { id: "kids_menu", name: "Kids Menu" },
+      { id: "ambience", name: "Atmosphere & Dining" }
+    ],
+
+    // Visual Image Gallery items categorized with name cards
     gallery: [
-      "/images/specialty_oysters.png",
-      "/images/gallery_prawns.jpg",
-      "/images/gallery_lobster.jpg",
-      "/images/gallery_tuna_tartare.jpg",
-      "/images/gallery_mussels.jpg",
-      "/images/gallery_steak_mushrooms.jpg",
-      "/images/hero_3.png",
-      "/images/about.png",
-      "/images/gallery_11.jpeg",
-      "/images/gallery_patio.jpg",
-      "/images/gallery_cannoli.jpg",
-      "/images/gallery_steak.jpg",
-      "/images/gallery_stained_glass.jpg",
-      "/images/specialty_crab_legs.png",
-      "/images/specialty_cheesecake.png"
+      {
+        title: "House Specialty Jumbo Prawns",
+        category: "specials",
+        categoryName: "Specials",
+        image: "/images/gallery/specials/jumbo_prawns.jpg",
+        description: "Colossal prawns prepared like lobster with a flavorful Tripletail Mango reduction."
+      },
+      {
+        title: "Alaskan King Crab Legs",
+        category: "specials",
+        categoryName: "Specials",
+        image: "/images/gallery/specials/king_crab_legs.png",
+        description: "Sweet colossal King Crab legs served hot with drawn butter and lemon."
+      },
+      {
+        title: "Oysters Rockefeller",
+        category: "starters",
+        categoryName: "Appetizers & Starters",
+        image: "/images/gallery/starters/oysters_rockefeller.png",
+        description: "Award-winning recipe baked with spinach, bacon, rich cheeses, and anisette."
+      },
+      {
+        title: "Sesame Pacific Ahi Tuna Tartare",
+        category: "starters",
+        categoryName: "Appetizers & Starters",
+        image: "/images/gallery/starters/tuna_tartare.jpg",
+        description: "Fresh Ahi tuna with avocado, ginger flower, wasabi peas, and crispy taro chips."
+      },
+      {
+        title: "Mussels Italiano",
+        category: "starters",
+        categoryName: "Appetizers & Starters",
+        image: "/images/gallery/starters/steamed_mussels.jpg",
+        description: "Sautéed in white wine garlic butter broth with artichoke hearts and herb croutons."
+      },
+      {
+        title: "Broiled Florida Lobster Tail",
+        category: "seafood",
+        categoryName: "Seafood Selections",
+        image: "/images/gallery/seafood/broiled_lobster_tail.jpg",
+        description: "Succulent broiled lobster tail with au gratin potatoes and seasonal vegetables."
+      },
+      {
+        title: "Center Cut Filet Mignon with Mushrooms",
+        category: "land_lovers",
+        categoryName: "Land Lovers Selections",
+        image: "/images/gallery/land_lovers/filet_mignon.jpg",
+        description: "Tender filet with rich port wine mushroom reduction, puff pastry, and potatoes."
+      },
+      {
+        title: "Tomahawk Prime Rib Steak",
+        category: "land_lovers",
+        categoryName: "Land Lovers Selections",
+        image: "/images/gallery/land_lovers/tomahawk_steak.jpg",
+        description: "Carved bone-in prime steak grilled to perfection with garden accompaniments."
+      },
+      {
+        title: "Artisanal Cannoli Siciliano",
+        category: "desserts",
+        categoryName: "Desserts",
+        image: "/images/gallery/desserts/cannoli.jpg",
+        description: "Crisp pastry shell filled with sweet ricotta cream, chocolate chips, and raspberry."
+      },
+      {
+        title: "Italian Ricotta Cheesecake",
+        category: "desserts",
+        categoryName: "Desserts",
+        image: "/images/gallery/desserts/ricotta_cheesecake.png",
+        description: "House-made authentic ricotta cheesecake with rich chocolate swirl and fresh berries."
+      },
+      {
+        title: "Covered Outdoor Patio Dining",
+        category: "ambience",
+        categoryName: "Atmosphere & Dining",
+        image: "/images/gallery/ambience/outdoor_patio.jpg",
+        description: "Lively al fresco dining under the blue canopy with ambient evening string lights."
+      },
+      {
+        title: "Historic Stained Glass Entrance",
+        category: "ambience",
+        categoryName: "Atmosphere & Dining",
+        image: "/images/gallery/ambience/stained_glass_entrance.jpg",
+        description: "Welcoming interior with our iconic vintage Café de Marco stained glass sign."
+      },
+      {
+        title: "Historic Old Marco Cottage",
+        category: "ambience",
+        categoryName: "Atmosphere & Dining",
+        image: "/images/gallery/ambience/historic_cottage_exterior.png",
+        description: "Historic early-1900s Florida cottage in the charming district of Old Marco Island."
+      },
+      {
+        title: "Main Dining Room",
+        category: "ambience",
+        categoryName: "Atmosphere & Dining",
+        image: "/images/gallery/ambience/main_dining_room.png",
+        description: "Warm, candle-lit fine dining setting with elegant tableside service."
+      },
+      {
+        title: "Intimate Dining Room",
+        category: "ambience",
+        categoryName: "Atmosphere & Dining",
+        image: "/images/gallery/ambience/intimate_dining.jpeg",
+        description: "Cozy, charming historic dining room setting for memorable evenings."
+      }
     ]
   },
 

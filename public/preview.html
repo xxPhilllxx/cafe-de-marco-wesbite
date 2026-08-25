@@ -2,108 +2,219 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Café de Marco - Image Asset Gallery</title>
+  <title>Café de Marco - Categorized Image Asset Preview</title>
   <style>
     body {
-      background-color: #0c0c0e;
-      color: #f4f4f7;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #0d0d11;
+      color: #e5e5e5;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
       padding: 2rem;
     }
-    h1 {
-      font-family: Georgia, serif;
-      color: #c5a880;
+    .header {
+      text-align: center;
+      margin-bottom: 3rem;
       border-bottom: 1px solid rgba(197, 168, 128, 0.2);
-      padding-bottom: 1rem;
+      padding-bottom: 1.5rem;
     }
-    .gallery {
+    h1 {
+      color: #c5a880;
+      font-family: Georgia, serif;
+      margin-bottom: 0.5rem;
+      font-size: 2.2rem;
+    }
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      max-width: 1400px;
+      margin: 0 auto;
     }
     .card {
-      background-color: #121216;
-      border: 1px solid rgba(197, 168, 128, 0.15);
+      background-color: #16161a;
+      border: 1px solid rgba(197, 168, 128, 0.2);
       border-radius: 8px;
-      padding: 1rem;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     }
     .card img {
       width: 100%;
-      height: 250px;
-      object-fit: contain;
+      height: 220px;
+      object-fit: cover;
       background-color: #000;
+    }
+    .card-info {
+      padding: 1rem;
+    }
+    .card-title {
+      font-weight: 600;
+      color: #ffffff;
+      font-size: 1.05rem;
+      margin-bottom: 0.3rem;
+    }
+    .card-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background-color: rgba(197, 168, 128, 0.15);
+      color: #c5a880;
+      padding: 0.2rem 0.5rem;
       border-radius: 4px;
+      margin-bottom: 0.5rem;
     }
-    .filename {
-      margin-top: 1rem;
-      font-size: 0.85rem;
-      color: #a1a1aa;
-      word-break: break-all;
-      text-align: center;
-    }
-    .dimensions {
+    .card-path {
+      font-family: monospace;
       font-size: 0.75rem;
-      color: #71717a;
-      margin-top: 0.2rem;
+      color: #888888;
+      word-break: break-all;
     }
   </style>
 </head>
 <body>
-  <h1>Café de Marco - Uploaded Image Asset Gallery</h1>
-  <p>Use this gallery to identify the filenames of the images you want to place in the Hero slider, About section, or Menu container.</p>
-  
-  <div class="gallery" id="gallery-container">
-    <!-- Image cards will be generated here -->
+  <div class="header">
+    <h1>Café de Marco - Image Asset Directory</h1>
+    <p>Categorized image folder structure under <code>public/images/gallery/</code></p>
   </div>
-
-  <script>
-    // List of files in public/images
-    const images = [
-      "about.png",
-      "gallery_1.png",
-      "gallery_11.jpeg",
-      "gallery_cannoli.jpg",
-      "gallery_lobster.jpg",
-      "gallery_mussels.jpg",
-      "gallery_patio.jpg",
-      "gallery_prawns.jpg",
-      "gallery_stained_glass.jpg",
-      "gallery_steak.jpg",
-      "gallery_steak_mushrooms.jpg",
-      "gallery_tuna_tartare.jpg",
-      "hero_2.png",
-      "hero_3.png",
-      "menu_page_1.jpg",
-      "menu_page_2.jpg",
-      "menu_page_3.jpg",
-      "menu_sheet.jpeg",
-      "menu_sheet_original.jpeg",
-      "specialty_cheesecake.png",
-      "specialty_crab_legs.png",
-      "specialty_oysters.png"
-];
-
-    const container = document.getElementById("gallery-container");
-    images.forEach(filename => {
-      const card = document.createElement("div");
-      card.className = "card";
-      
-      const img = document.createElement("img");
-      img.src = `/images/${filename}`;
-      img.alt = filename;
-      
-      const fileLabel = document.createElement("div");
-      fileLabel.className = "filename";
-      fileLabel.textContent = filename;
-      
-      card.appendChild(img);
-      card.appendChild(fileLabel);
-      container.appendChild(card);
-    });
-  </script>
+  <div class="grid">
+    <div style="grid-column: 1 / -1; margin-top: 2rem; border-bottom: 1px solid rgba(197,168,128,0.3); padding-bottom: 0.5rem;"><h2 style="color: #c5a880; font-family: serif; font-size: 1.5rem; margin: 0;">Specials <span style="font-size: 0.9rem; color: #888; font-family: sans-serif;">(/images/gallery/specials/)</span></h2></div>
+                <div class="card">
+                    <img src="/images/gallery/specials/jumbo_prawns.jpg" alt="Jumbo Prawns" loading="lazy">
+                    <div class="card-info">
+                        <div class="card-title">Jumbo Prawns</div>
+                        <div class="card-tag">Specials</div>
+                        <div class="card-path">/images/gallery/specials/jumbo_prawns.jpg</div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="/images/gallery/specials/king_crab_legs.png" alt="King Crab Legs" loading="lazy">
+                    <div class="card-info">
+                        <div class="card-title">King Crab Legs</div>
+                        <div class="card-tag">Specials</div>
+                        <div class="card-path">/images/gallery/specials/king_crab_legs.png</div>
+                    </div>
+                </div>
+                <div style="grid-column: 1 / -1; margin-top: 2rem; border-bottom: 1px solid rgba(197,168,128,0.3); padding-bottom: 0.5rem;"><h2 style="color: #c5a880; font-family: serif; font-size: 1.5rem; margin: 0;">Appetizers & Starters <span style="font-size: 0.9rem; color: #888; font-family: sans-serif;">(/images/gallery/starters/)</span></h2></div>
+                <div class="card">
+                    <img src="/images/gallery/starters/oysters_rockefeller.png" alt="Oysters Rockefeller" loading="lazy">
+                    <div class="card-info">
+                        <div class="card-title">Oysters Rockefeller</div>
+                        <div class="card-tag">Appetizers & Starters</div>
+                        <div class="card-path">/images/gallery/starters/oysters_rockefeller.png</div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="/images/gallery/starters/steamed_mussels.jpg" alt="Steamed Mussels" loading="lazy">
+                    <div class="card-info">
+                        <div class="card-title">Steamed Mussels</div>
+                        <div class="card-tag">Appetizers & Starters</div>
+                        <div class="card-path">/images/gallery/starters/steamed_mussels.jpg</div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="/images/gallery/starters/tuna_tartare.jpg" alt="Tuna Tartare" loading="lazy">
+                    <div class="card-info">
+                        <div class="card-title">Tuna Tartare</div>
+                        <div class="card-tag">Appetizers & Starters</div>
+                        <div class="card-path">/images/gallery/starters/tuna_tartare.jpg</div>
+                    </div>
+                </div>
+                <div style="grid-column: 1 / -1; margin-top: 2rem; border-bottom: 1px solid rgba(197,168,128,0.3); padding-bottom: 0.5rem;"><h2 style="color: #c5a880; font-family: serif; font-size: 1.5rem; margin: 0;">Seafood Selections <span style="font-size: 0.9rem; color: #888; font-family: sans-serif;">(/images/gallery/seafood/)</span></h2></div>
+                <div class="card">
+                    <img src="/images/gallery/seafood/broiled_lobster_tail.jpg" alt="Broiled Lobster Tail" loading="lazy">
+                    <div class="card-info">
+                        <div class="card-title">Broiled Lobster Tail</div>
+                        <div class="card-tag">Seafood Selections</div>
+                        <div class="card-path">/images/gallery/seafood/broiled_lobster_tail.jpg</div>
+                    </div>
+                </div>
+                <div style="grid-column: 1 / -1; margin-top: 2rem; border-bottom: 1px solid rgba(197,168,128,0.3); padding-bottom: 0.5rem;"><h2 style="color: #c5a880; font-family: serif; font-size: 1.5rem; margin: 0;">Land Lovers Selections <span style="font-size: 0.9rem; color: #888; font-family: sans-serif;">(/images/gallery/land_lovers/)</span></h2></div>
+                <div class="card">
+                    <img src="/images/gallery/land_lovers/filet_mignon.jpg" alt="Filet Mignon" loading="lazy">
+                    <div class="card-info">
+                        <div class="card-title">Filet Mignon</div>
+                        <div class="card-tag">Land Lovers Selections</div>
+                        <div class="card-path">/images/gallery/land_lovers/filet_mignon.jpg</div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="/images/gallery/land_lovers/tomahawk_steak.jpg" alt="Tomahawk Steak" loading="lazy">
+                    <div class="card-info">
+                        <div class="card-title">Tomahawk Steak</div>
+                        <div class="card-tag">Land Lovers Selections</div>
+                        <div class="card-path">/images/gallery/land_lovers/tomahawk_steak.jpg</div>
+                    </div>
+                </div>
+                <div style="grid-column: 1 / -1; margin-top: 2rem; border-bottom: 1px solid rgba(197,168,128,0.3); padding-bottom: 0.5rem;"><h2 style="color: #c5a880; font-family: serif; font-size: 1.5rem; margin: 0;">Desserts <span style="font-size: 0.9rem; color: #888; font-family: sans-serif;">(/images/gallery/desserts/)</span></h2></div>
+                <div class="card">
+                    <img src="/images/gallery/desserts/cannoli.jpg" alt="Cannoli" loading="lazy">
+                    <div class="card-info">
+                        <div class="card-title">Cannoli</div>
+                        <div class="card-tag">Desserts</div>
+                        <div class="card-path">/images/gallery/desserts/cannoli.jpg</div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="/images/gallery/desserts/ricotta_cheesecake.png" alt="Ricotta Cheesecake" loading="lazy">
+                    <div class="card-info">
+                        <div class="card-title">Ricotta Cheesecake</div>
+                        <div class="card-tag">Desserts</div>
+                        <div class="card-path">/images/gallery/desserts/ricotta_cheesecake.png</div>
+                    </div>
+                </div>
+                <div style="grid-column: 1 / -1; margin-top: 2rem; border-bottom: 1px solid rgba(197,168,128,0.3); padding-bottom: 0.5rem;"><h2 style="color: #c5a880; font-family: serif; font-size: 1.5rem; margin: 0;">Atmosphere & Dining <span style="font-size: 0.9rem; color: #888; font-family: sans-serif;">(/images/gallery/ambience/)</span></h2></div>
+                <div class="card">
+                    <img src="/images/gallery/ambience/historic_cottage_exterior.png" alt="Historic Cottage Exterior" loading="lazy">
+                    <div class="card-info">
+                        <div class="card-title">Historic Cottage Exterior</div>
+                        <div class="card-tag">Atmosphere & Dining</div>
+                        <div class="card-path">/images/gallery/ambience/historic_cottage_exterior.png</div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="/images/gallery/ambience/intimate_dining.jpeg" alt="Intimate Dining" loading="lazy">
+                    <div class="card-info">
+                        <div class="card-title">Intimate Dining</div>
+                        <div class="card-tag">Atmosphere & Dining</div>
+                        <div class="card-path">/images/gallery/ambience/intimate_dining.jpeg</div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="/images/gallery/ambience/main_dining_room.png" alt="Main Dining Room" loading="lazy">
+                    <div class="card-info">
+                        <div class="card-title">Main Dining Room</div>
+                        <div class="card-tag">Atmosphere & Dining</div>
+                        <div class="card-path">/images/gallery/ambience/main_dining_room.png</div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="/images/gallery/ambience/outdoor_patio.jpg" alt="Outdoor Patio" loading="lazy">
+                    <div class="card-info">
+                        <div class="card-title">Outdoor Patio</div>
+                        <div class="card-tag">Atmosphere & Dining</div>
+                        <div class="card-path">/images/gallery/ambience/outdoor_patio.jpg</div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="/images/gallery/ambience/stained_glass_entrance.jpg" alt="Stained Glass Entrance" loading="lazy">
+                    <div class="card-info">
+                        <div class="card-title">Stained Glass Entrance</div>
+                        <div class="card-tag">Atmosphere & Dining</div>
+                        <div class="card-path">/images/gallery/ambience/stained_glass_entrance.jpg</div>
+                    </div>
+                </div>
+                
+  </div>
 </body>
 </html>
