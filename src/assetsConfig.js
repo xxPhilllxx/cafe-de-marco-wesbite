@@ -136,6 +136,13 @@ export const restaurantConfig = {
         description: "Carved bone-in prime steak grilled to perfection with garden accompaniments."
       },
       {
+        title: "12 oz. Angus New York Strip Steak",
+        category: "land_lovers",
+        categoryName: "Land Lovers Selections",
+        image: "/images/gallery/land_lovers/ny_strip_steak.jpg",
+        description: "12 oz. premium Angus strip steak grilled to order, served with portabella mushrooms or lightly blackened, accompanied by seasonal vegetables and potatoes."
+      },
+      {
         title: "Artisanal Cannoli Siciliano",
         category: "desserts",
         categoryName: "Desserts",
@@ -247,12 +254,21 @@ export const restaurantConfig = {
         name: "Steaks & Entrées",
         items: [
           {
-            name: "Slow-Braised Lamb Osso Buco",
-            description: "Tender, fall-off-the-bone lamb shank slow-braised in red wine, root vegetables, and aromatic spices over saffron risotto."
+            name: "12 oz. Angus New York Strip Steak",
+            price: "$47",
+            description: "12 oz. center-cut Angus strip steak grilled to perfection, served with portabella mushrooms or lightly blackened, complimented by chef's nightly accompaniments.",
+            tags: ["Angus Prime", "Chef's Choice"]
+          },
+          {
+            name: "10 oz. Center Cut Filet Mignon",
+            price: "Market Price",
+            description: "Filo puff pastry, marinated portabella mushrooms, and rich garlic port wine sauce.",
+            tags: ["Prime Cut"]
           },
           {
             name: "Chicken Francese",
-            description: "Tender breast of chicken egg-battered and sautéed in a delicate lemon, butter, and white wine pan-sauce."
+            price: "$32",
+            description: "Tender breast of chicken egg-battered and finished in a delicate lemon beurre blanc sauce."
           }
         ]
       }
