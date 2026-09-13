@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Download, FileText, CheckCircle, Upload, Eye, X } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Download, FileText, CheckCircle, Upload, Eye, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { restaurantConfig } from '../assetsConfig';
 
 export default function MenuSection() {
@@ -9,6 +9,15 @@ export default function MenuSection() {
   const menuConfig = restaurantConfig.menuPreview;
   const menuImage = restaurantConfig.images.menuPlaceholder;
   const pdfUrl = restaurantConfig.images.menuPdfUrl;
+  const menuPages = restaurantConfig.images.menuRedacted || [];
+
+  // Pre-load all menu page images on mount to ensure instantaneous switching
+  useEffect(() => {
+    menuPages.forEach((url) => {
+      const img = new Image();
+      img.src = url;
+    });
+  }, [menuPages]);
 
   return (
     <section id="menu" className="section-padding" style={{ backgroundColor: 'var(--bg-obsidian)', position: 'relative' }}>
@@ -171,9 +180,9 @@ export default function MenuSection() {
               </p>
 
               {/* Multi-page Menu Image Viewer */}
-              {restaurantConfig.images.menuRedacted && restaurantConfig.images.menuRedacted.length > 0 ? (
+              {menuPages && menuPages.length > 0 ? (
                 <div>
-                  {/* Current Active Menu Page */}
+                  {/* Current Active Menu Page Frame */}
                   <div 
                     onClick={() => setFullscreenPage(activePage)}
                     style={{ 
@@ -181,24 +190,27 @@ export default function MenuSection() {
                       cursor: 'pointer', 
                       borderRadius: '8px', 
                       overflow: 'hidden', 
-                      height: '340px', 
-                      border: '1px solid rgba(197,168,128,0.15)',
+                      height: '380px', 
+                      border: '1px solid rgba(197,168,128,0.2)',
                       backgroundColor: '#16161a',
-                      marginBottom: '1.2rem',
+                      marginBottom: '1rem',
                       display: 'flex',
                       alignItems: 'center',
-                      justifyContent: 'center'
+                      justifyContent: 'center',
+                      boxShadow: '0 10px 25px rgba(0,0,0,0.5)'
                     }}
-                    title="Click to zoom menu"
+                    title="Click to zoom menu full screen"
                   >
                     <img 
-                      src={restaurantConfig.images.menuRedacted[activePage]} 
+                      key={activePage}
+                      src={menuPages[activePage]} 
                       alt={`Cafe de Marco Menu Page ${activePage + 1}`}
                       style={{ 
                         maxHeight: '100%', 
                         maxWidth: '100%', 
                         objectFit: 'contain',
-                        transition: 'transform 0.3s ease'
+                        transition: 'transform 0.3s ease',
+                        animation: 'fadeIn 0.3s ease'
                       }}
                       onMouseEnter={(e) => e.target.style.transform = 'scale(1.02)'}
                       onMouseLeave={(e) => e.target.style.transform = 'scale(1.0)'}
@@ -224,39 +236,102 @@ export default function MenuSection() {
                     >
                       <Eye size={16} />
                     </div>
+
+                    {/* Previous/Next overlay controls */}
+                    {menuPages.length > 1 && (
+                      <>
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setActivePage((prev) => (prev === 0 ? menuPages.length - 1 : prev - 1));
+                          }}
+                          style={{
+                            position: 'absolute',
+                            left: '0.5rem',
+                            top: '50%',
+                            transform: 'translateY(-50%)',
+                            backgroundColor: 'rgba(9, 9, 11, 0.75)',
+                            border: '1px solid rgba(197, 168, 128, 0.3)',
+                            color: 'var(--text-primary)',
+                            borderRadius: '50%',
+                            width: '32px',
+                            height: '32px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            cursor: 'pointer'
+                          }}
+                          aria-label="Previous Page"
+                        >
+                          <ChevronLeft size={18} />
+                        </button>
+
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setActivePage((prev) => (prev + 1) % menuPages.length);
+                          }}
+                          style={{
+                            position: 'absolute',
+                            right: '0.5rem',
+                            top: '50%',
+                            transform: 'translateY(-50%)',
+                            backgroundColor: 'rgba(9, 9, 11, 0.75)',
+                            border: '1px solid rgba(197, 168, 128, 0.3)',
+                            color: 'var(--text-primary)',
+                            borderRadius: '50%',
+                            width: '32px',
+                            height: '32px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            cursor: 'pointer'
+                          }}
+                          aria-label="Next Page"
+                        >
+                          <ChevronRight size={18} />
+                        </button>
+                      </>
+                    )}
                   </div>
 
                   {/* Page Selector Tabs */}
-                  {restaurantConfig.images.menuRedacted.length > 1 && (
+                  {menuPages.length > 1 && (
                     <div 
                       style={{ 
                         display: 'flex', 
                         justifyContent: 'center', 
-                        gap: '0.4rem', 
+                        gap: '0.5rem', 
                         flexWrap: 'wrap',
                         marginBottom: '1.5rem' 
                       }}
                     >
-                      {restaurantConfig.images.menuRedacted.map((_, idx) => (
-                        <button
-                          key={idx}
-                          onClick={() => setActivePage(idx)}
-                          style={{
-                            backgroundColor: activePage === idx ? 'var(--color-gold)' : 'rgba(9, 9, 11, 0.6)',
-                            color: activePage === idx ? '#09090b' : 'var(--text-secondary)',
-                            border: '1px solid',
-                            borderColor: activePage === idx ? 'var(--color-gold)' : 'rgba(197, 168, 128, 0.15)',
-                            padding: '0.35rem 0.75rem',
-                            borderRadius: '4px',
-                            fontSize: '0.75rem',
-                            fontWeight: '600',
-                            cursor: 'pointer',
-                            transition: 'var(--transition-fast)'
-                          }}
-                        >
-                          Page {idx + 1}
-                        </button>
-                      ))}
+                      {menuPages.map((_, idx) => {
+                        const pageLabels = ["Page 1 (Starters & Land)", "Page 2 (Seafood & Specials)", "Page 3 (Kids Menu)"];
+                        const label = pageLabels[idx] || `Page ${idx + 1}`;
+                        const isActive = activePage === idx;
+                        return (
+                          <button
+                            key={idx}
+                            onClick={() => setActivePage(idx)}
+                            style={{
+                              backgroundColor: isActive ? 'var(--color-gold)' : 'rgba(9, 9, 11, 0.6)',
+                              color: isActive ? '#09090b' : 'var(--text-secondary)',
+                              border: '1px solid',
+                              borderColor: isActive ? 'var(--color-gold)' : 'rgba(197, 168, 128, 0.2)',
+                              padding: '0.4rem 0.8rem',
+                              borderRadius: '4px',
+                              fontSize: '0.75rem',
+                              fontWeight: isActive ? '700' : '500',
+                              cursor: 'pointer',
+                              transition: 'all 0.2s ease',
+                              boxShadow: isActive ? '0 2px 8px rgba(197, 168, 128, 0.3)' : 'none'
+                            }}
+                          >
+                            {label}
+                          </button>
+                        );
+                      })}
                     </div>
                   )}
                 </div>
@@ -302,7 +377,7 @@ export default function MenuSection() {
                   alignItems: 'center',
                   justifyContent: 'center',
                   animation: 'fadeIn 0.25s ease',
-                  padding: '2rem'
+                  padding: '1.5rem'
                 }}
               >
                 {/* Close Button */}
@@ -312,8 +387,8 @@ export default function MenuSection() {
                     position: 'absolute',
                     top: '1.5rem',
                     right: '1.5rem',
-                    background: 'rgba(255, 255, 255, 0.05)',
-                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    background: 'rgba(255, 255, 255, 0.08)',
+                    border: '1px solid rgba(255, 255, 255, 0.15)',
                     borderRadius: '50%',
                     width: '46px',
                     height: '46px',
@@ -321,30 +396,102 @@ export default function MenuSection() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    cursor: 'pointer'
+                    cursor: 'pointer',
+                    zIndex: 2010
                   }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-gold)'}
+                  onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-primary)'}
                 >
                   <X size={24} />
                 </button>
 
-                {/* Big Image */}
-                <div style={{ maxWidth: '90%', maxHeight: '90%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                {/* Lightbox Navigation Arrows */}
+                {menuPages.length > 1 && (
+                  <>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setFullscreenPage((prev) => (prev === 0 ? menuPages.length - 1 : prev - 1));
+                      }}
+                      style={{
+                        position: 'absolute',
+                        left: '1.5rem',
+                        background: 'rgba(255, 255, 255, 0.08)',
+                        border: '1px solid rgba(255, 255, 255, 0.15)',
+                        borderRadius: '50%',
+                        width: '50px',
+                        height: '50px',
+                        color: 'var(--text-primary)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        cursor: 'pointer',
+                        zIndex: 2010
+                      }}
+                      onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-gold)'}
+                      onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-primary)'}
+                    >
+                      <ChevronLeft size={24} />
+                    </button>
+
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setFullscreenPage((prev) => (prev + 1) % menuPages.length);
+                      }}
+                      style={{
+                        position: 'absolute',
+                        right: '1.5rem',
+                        background: 'rgba(255, 255, 255, 0.08)',
+                        border: '1px solid rgba(255, 255, 255, 0.15)',
+                        borderRadius: '50%',
+                        width: '50px',
+                        height: '50px',
+                        color: 'var(--text-primary)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        cursor: 'pointer',
+                        zIndex: 2010
+                      }}
+                      onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-gold)'}
+                      onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-primary)'}
+                    >
+                      <ChevronRight size={24} />
+                    </button>
+                  </>
+                )}
+
+                {/* Big Image Frame */}
+                <div 
+                  onClick={(e) => e.stopPropagation()}
+                  style={{ 
+                    maxWidth: '92vw', 
+                    maxHeight: '90vh', 
+                    display: 'flex', 
+                    flexDirection: 'column', 
+                    alignItems: 'center' 
+                  }}
+                >
                   <img
-                    src={restaurantConfig.images.menuRedacted[fullscreenPage]}
+                    key={fullscreenPage}
+                    src={menuPages[fullscreenPage]}
                     alt={`Cafe de Marco Menu Page ${fullscreenPage + 1}`}
-                    onClick={(e) => e.stopPropagation()}
                     style={{
                       maxWidth: '100%',
-                      maxHeight: '100%',
+                      maxHeight: '82vh',
                       objectFit: 'contain',
                       borderRadius: '4px',
-                      boxShadow: '0 25px 60px rgba(0,0,0,0.8)',
-                      border: '1px solid rgba(197, 168, 128, 0.2)'
+                      boxShadow: '0 25px 60px rgba(0,0,0,0.9)',
+                      border: '1px solid rgba(197, 168, 128, 0.25)',
+                      animation: 'fadeIn 0.2s ease'
                     }}
                   />
-                  <span style={{ marginTop: '1rem', color: 'var(--text-secondary)', fontSize: '0.9rem', letterSpacing: '0.05em' }}>
-                    Menu Page {fullscreenPage + 1} of {restaurantConfig.images.menuRedacted.length}
-                  </span>
+                  <div style={{ marginTop: '0.8rem', display: 'flex', gap: '0.6rem', alignItems: 'center' }}>
+                    <span style={{ color: 'var(--color-gold)', fontSize: '0.85rem', fontWeight: 'bold' }}>
+                      Menu Page {fullscreenPage + 1} of {menuPages.length}
+                    </span>
+                  </div>
                 </div>
               </div>
             )}
